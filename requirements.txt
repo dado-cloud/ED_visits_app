@@ -1,12 +1,13 @@
-streamlit==1.32.2
-pandas==2.2.2
-numpy==1.26.4
-plotly==5.20.0
+streamlit
+pandas
+numpy
+plotly
 
-torch==2.2.2
+torch==2.2.2+cpu
 pytorch-lightning==2.2.1
 pytorch-forecasting==1.0.0
 
-scikit-learn==1.4.2
+scikit-learn
+cloudpickle
 
-cloudpickle==3.0.0
+--extra-index-url https://download.pytorch.org/whl/cpu
