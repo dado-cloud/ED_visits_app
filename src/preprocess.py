@@ -1,11 +1,15 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 
-def load_input_data(path="artifacts/sample_input.csv"):
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_DIR = BASE_DIR / "model"
+
+
+def load_input_data(path=MODEL_DIR / "sample_input.csv"):
     df = pd.read_csv(path)
     return df
-
 
 def create_time_features(df):
     df = df.copy()
