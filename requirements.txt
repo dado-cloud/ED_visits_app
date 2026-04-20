@@ -1,4 +1,12 @@
-streamlit
-pandas
-plotly
-numpy
+streamlit==1.32.2
+pandas==2.2.2
+numpy==1.26.4
+plotly==5.20.0
+
+torch==2.2.2
+pytorch-lightning==2.2.1
+pytorch-forecasting==1.0.0
+
+scikit-learn==1.4.2
+
+cloudpickle==3.0.0
