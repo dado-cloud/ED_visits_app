@@ -85,5 +85,5 @@ def prepare_future_dataframe(input_df, forecast_days, feature_config):
 
     # combine history + future
     full_df = pd.concat([df, future_df], ignore_index=True)
-
+    full_df.fillna(0, inplace=True)
     return full_df
