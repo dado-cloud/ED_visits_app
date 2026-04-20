@@ -28,7 +28,7 @@ st.set_page_config(
 # Paths
 # -----------------------------
 BASE_DIR = Path(__file__).resolve().parent
-ARTIFACTS_DIR = BASE_DIR / "artifacts"
+ARTIFACTS_DIR = BASE_DIR / "model"
 
 MODEL_PATH = ARTIFACTS_DIR / "config5_tft.ckpt"
 TRAINING_DATASET_PATH = ARTIFACTS_DIR / "training_dataset.pkl"
