@@ -1,1 +1,25 @@
+{
+  "target": "ED_visits",
+  "time_idx": "time_idx",
+  "group_ids": ["series_id"],
 
+  "known_reals": [
+    "time_idx",
+    "day_sin",
+    "day_cos",
+    "month_sin",
+    "month_cos"
+  ],
+
+  "unknown_reals": [
+    "ED_visits",
+    "avg_weather_C",
+    "avg_precip",
+    "avg_snow"
+  ],
+
+  "static_categoricals": ["series_id"],
+
+  "max_encoder_length": 60,
+  "max_prediction_length": 14
+}
