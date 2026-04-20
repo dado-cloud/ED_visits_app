@@ -1,1 +1,7 @@
 
+{
+  "model_name": "config5_tft",
+  "mae": 4.46,
+  "rmse": 5.02,
+  "mape": 41.49
+}
