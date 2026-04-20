@@ -11,17 +11,19 @@ def load_input_data(path=MODEL_DIR / "test_data.csv"):
     df = pd.read_csv(path)
     return df
 
+
 def create_time_features(df):
     df = df.copy()
+
     df["date"] = pd.to_datetime(df["date"])
 
-    # match notebook
-    df["dow"] = df["date"].dt.dayofweek
-    df["month"] = df["date"].dt.month
+    # FIX: match training naming
+    df["dow"] = df["dow"] = df["date"].dt.dayofweek
 
-    # cyclic encoding
-    df["day_sin"] = np.sin(2 * np.pi * df["dow"] / 7)
-    df["day_cos"] = np.cos(2 * np.pi * df["dow"] / 7)
+    df["dow_sin"] = np.sin(2 * np.pi * df["dow"] / 7)
+    df["dow_cos"] = np.cos(2 * np.pi * df["dow"] / 7)
+
+    df["month"] = df["date"].dt.month
 
     df["month_sin"] = np.sin(2 * np.pi * df["month"] / 12)
     df["month_cos"] = np.cos(2 * np.pi * df["month"] / 12)
