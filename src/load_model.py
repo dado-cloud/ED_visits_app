@@ -1,4 +1,4 @@
-import pickle
+import cloudpickle
 import torch
 from pytorch_forecasting import TemporalFusionTransformer
 
@@ -13,7 +13,9 @@ def load_tft_model(model_path):
     return model
 
 
+
+
 def load_training_dataset(path):
     with open(path, "rb") as f:
-        training = pickle.load(f)
+        training = cloudpickle.load(f)
     return training
