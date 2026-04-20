@@ -28,13 +28,12 @@ st.set_page_config(
 # Paths
 # -----------------------------
 BASE_DIR = Path(__file__).resolve().parent
-ARTIFACTS_DIR = BASE_DIR / "model"
+MODEL_DIR = BASE_DIR / "model"
 
-MODEL_PATH = ARTIFACTS_DIR / "config5_tft.ckpt"
-TRAINING_DATASET_PATH = ARTIFACTS_DIR / "training_dataset.pkl"
-FEATURE_CONFIG_PATH = ARTIFACTS_DIR / "feature_config.json"
-METRICS_PATH = ARTIFACTS_DIR / "metrics.json"
-
+MODEL_PATH = MODEL_DIR / "tft_model.ckpt"
+TRAINING_DATASET_PATH = MODEL_DIR / "dataset.pkl"
+FEATURE_CONFIG_PATH = MODEL_DIR / "feature_config.json"
+METRICS_PATH = MODEL_DIR / "metrics.json"
 # -----------------------------
 # Helpers
 # -----------------------------
