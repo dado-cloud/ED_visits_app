@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_DIR = BASE_DIR / "model"
 
 
-def load_input_data(path=MODEL_DIR / "sample_input.csv"):
+def load_input_data(path=MODEL_DIR / "test_data.csv"):
     df = pd.read_csv(path)
     return df
 
